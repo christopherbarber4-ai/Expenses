@@ -1,13 +1,12 @@
 /**
  * 
  */
-package serivce;
+package service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
-import dao.FakePersonDataAccessService;
 import dao.PersonDao;
 import model.Person;
 
@@ -17,17 +16,15 @@ import model.Person;
 @Service
 public class PersonService {
 	
-	private final PersonDao personDao;
-	
+	private PersonDao personDao;
 	
 	@Autowired
-	public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
+	public void PersonSerice(@Qualifier("fakeDao") PersonDao personDao) {
 		this.personDao = personDao;
 	}
 	
 	public int addPerson(Person person) {
-		return PersonDao.insertPerson(person);
-		
+		return personDao.insertPerson(person);
 	}
 
 }

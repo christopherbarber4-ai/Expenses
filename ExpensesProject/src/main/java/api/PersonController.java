@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import model.Person;
-import serivce.PersonService;
+import service.PersonService;
 
 /**
  * 
@@ -27,8 +27,6 @@ public class PersonController {
 	@PostMapping
 	public void addPerson(Person person) {
 		personService.addPerson(person);
-	
 	}
 
 }
- 

@@ -1,10 +1,10 @@
-package com.example.expenses;
+package com.example.ExpensesProject;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ExpensesApplicationTests {
+class ExpensesProjectApplicationTests {
 
 	@Test
 	void contextLoads() {
