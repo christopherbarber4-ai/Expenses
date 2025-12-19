@@ -23,7 +23,7 @@ public class PersonService {
 	private PersonDao personDao;
 	
 	@Autowired
-	public void PersonSerice(@Qualifier("postgres") PersonDao personDao) {
+	public void PersonSerice(@Qualifier("fakeDao") PersonDao personDao) {
 		this.personDao = personDao;
 	}
 	
